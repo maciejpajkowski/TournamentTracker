@@ -98,7 +98,7 @@ namespace TrackerLibrary
 
             while (val < teamCount)
             {
-                output++;
+                output += 1;
                 val *= 2;
             }
 

@@ -1,4 +1,6 @@
-﻿namespace TrackerUI
+﻿using System.Windows.Forms;
+
+namespace TrackerUI
 {
     partial class TournamentViewerForm
     {
@@ -86,6 +88,7 @@
             this.roundDropDown.Name = "roundDropDown";
             this.roundDropDown.Size = new System.Drawing.Size(224, 33);
             this.roundDropDown.TabIndex = 2;
+            this.roundDropDown.SelectedIndexChanged += new System.EventHandler(this.RoundDropDown_SelectedIndexChanged);
             // 
             // unplayedOnlyCheckbox
             // 
@@ -99,6 +102,7 @@
             this.unplayedOnlyCheckbox.TabIndex = 3;
             this.unplayedOnlyCheckbox.Text = "Unplayed only";
             this.unplayedOnlyCheckbox.UseVisualStyleBackColor = true;
+            this.unplayedOnlyCheckbox.CheckedChanged += new System.EventHandler(this.UnplayedOnlyCheckbox_CheckedChanged);
             // 
             // matchupListBox
             // 
@@ -108,6 +112,7 @@
             this.matchupListBox.Name = "matchupListBox";
             this.matchupListBox.Size = new System.Drawing.Size(313, 204);
             this.matchupListBox.TabIndex = 4;
+            this.matchupListBox.SelectedIndexChanged += new System.EventHandler(this.MatchupListBox_SelectedIndexChanged);
             // 
             // teamOneName
             // 
@@ -179,7 +184,6 @@
             this.versusLabel.TabIndex = 1;
             this.versusLabel.Text = "-vs.-";
             this.versusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.versusLabel.Click += new System.EventHandler(this.VersusLabel_Click);
             // 
             // scoreButton
             // 
@@ -195,6 +199,7 @@
             this.scoreButton.TabIndex = 6;
             this.scoreButton.Text = "Score";
             this.scoreButton.UseVisualStyleBackColor = true;
+            this.scoreButton.Click += new System.EventHandler(this.ScoreButton_Click);
             // 
             // TournamentViewerForm
             // 
@@ -236,9 +241,9 @@
         private System.Windows.Forms.Label teamOneName;
         private System.Windows.Forms.Label teamOneScoreLabel;
         private System.Windows.Forms.TextBox teamOneScoreValue;
+        private System.Windows.Forms.TextBox teamTwoScoreValue;
         private System.Windows.Forms.Label teamTwoName;
         private System.Windows.Forms.Label teamTwoScoreLabel;
-        private System.Windows.Forms.TextBox teamTwoScoreValue;
         private System.Windows.Forms.Label versusLabel;
         private System.Windows.Forms.Button scoreButton;
     }
